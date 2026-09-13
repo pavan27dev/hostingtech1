@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "start": "serve -s dist",
     "lint": "oxlint",
     "preview": "vite preview"
   },
@@ -17,6 +18,7 @@
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router-dom": "^7.18.3",
+    "serve": "^14.2.0",
     "three": "^0.186.0"
   },
   "devDependencies": {
