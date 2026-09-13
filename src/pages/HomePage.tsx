@@ -34,7 +34,7 @@ export default function HomePage() {
       <PortfolioGrid limit={3} />
       <PricingSection />
       <FAQSection />
-      <InstagramSection />
+      {/* <InstagramSection /> */}
       <FinalCTA />
     </>
   )
