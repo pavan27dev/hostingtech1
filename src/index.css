@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-white text-ink-700 font-sans antialiased;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display text-ink-900 tracking-tight;
+  }
+  ::selection {
+    @apply bg-brand-100 text-brand-900;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-white rounded;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8;
+  }
+  .section {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+  .card {
+    @apply rounded-2xl border border-ink-100 bg-white shadow-card transition-all duration-300;
+  }
+  .card-hover {
+    @apply hover:-translate-y-1 hover:shadow-card-hover hover:border-brand-200;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-brand-100 bg-brand-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-700;
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(11,18,32,0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(11,18,32,0.045) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border border-white/60;
+  }
+  .perspective {
+    perspective: 1400px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
+
+/* Thin scrollbars for mock dashboards */
+.thin-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
+.thin-scroll::-webkit-scrollbar-thumb { background: #d4dbe7; border-radius: 999px; }
