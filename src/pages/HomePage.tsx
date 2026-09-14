@@ -3,7 +3,7 @@ import { siteConfig } from '@/config/site'
 import { Hero } from '@/components/sections/Hero'
 import {
   ValueGrid, ServicesGrid, WhyChooseUs, HowItWorks, CRMShowcase, EcommerceShowcase,
-  PortfolioGrid, PricingSection, FAQSection, InstagramSection, FinalCTA,
+  PortfolioGrid, PricingSection, FAQSection, FinalCTA,
 } from '@/components/sections/HomeSections'
 
 export default function HomePage() {
@@ -34,7 +34,7 @@ export default function HomePage() {
       <PortfolioGrid limit={3} />
       <PricingSection />
       <FAQSection />
-      <InstagramSection />
+      {/* <InstagramSection /> */}
       <FinalCTA />
     </>
   )
