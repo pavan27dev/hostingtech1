@@ -28,7 +28,7 @@ export const siteConfig = {
 
   /** Contact */
   contact: {
-    email: env.VITE_CONTACT_EMAIL || '[EMAIL]',
+    // email: env.VITE_CONTACT_EMAIL || '[EMAIL]',
     phone: env.VITE_CONTACT_PHONE || '+91 76608 89883',
     /** International format, digits only (e.g. 919876543210) */
     whatsapp: env.VITE_WHATSAPP_NUMBER || '917660889883',
